@@ -1,0 +1,67 @@
+$block: ".modal";
+
+#{$block} {
+  width: 100%;
+  max-width: 1000px;
+  max-height: 650px;
+  background-color: #fff;
+  border: 1px solid #000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+
+  &__header {
+    font-family: Inter-bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 16px;
+    border-bottom: 1px #e5e5e5 solid;
+
+    &-text {
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    &-close-btn {
+      background-color: transparent;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  &__body {
+    padding: 8px 16px;
+    font-family: Inter-bold;
+
+    &-utils-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &-saved-comments {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin: 16px 0 ;
+    }
+    &-comments-count {
+      color: #fff;
+      background-color: #ff3b30;
+      padding: 4px 12px;
+      font-size: 12px;
+      border-radius: 40%;
+    }
+  }
+}
