@@ -26,7 +26,7 @@ export default function Modal({ onClose }: IModalProps) {
         <div className={styles[`${BLOCK}__body-utils-bar`]}>
           <div className={styles[`${BLOCK}__body-saved-comments`]}>
             <span>Saved Comments</span>
-            <div className={styles[`${BLOCK}__body-comments-count`]}>3</div>
+            <div className={styles[`${BLOCK}__body-comments-count`]}>{commentData.length}</div>
           </div>
           <Toggle label="All Users" onToggle={() => {}} />
         </div>
