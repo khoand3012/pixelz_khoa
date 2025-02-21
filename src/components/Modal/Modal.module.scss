@@ -3,9 +3,9 @@ $block: ".modal";
 #{$block} {
   width: 100%;
   max-width: 1000px;
-  max-height: 650px;
+  max-height: 100vh;
   background-color: #fff;
-  border: 1px solid #000;
+  border: 1px solid #e5e5e5;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -54,7 +54,7 @@ $block: ".modal";
       display: flex;
       align-items: center;
       gap: 8px;
-      margin: 16px 0 ;
+      margin: 16px 0;
     }
     &-comments-count {
       color: #fff;
@@ -62,6 +62,39 @@ $block: ".modal";
       padding: 4px 12px;
       font-size: 12px;
       border-radius: 40%;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 16px;
+  }
+
+  &__footer-btn-container {
+    display: flex;
+    gap: 8px;
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--set-btn-border-color, #03183f);
+    border-radius: 4px;
+    background-color: var(--set-btn-bg-color, transparent);
+    color: var(--set-btn-text-color, inherit);
+    &:hover {
+      border-color: #03183f66;
+    }
+    &:focus {
+      outline: 1px solid #03183fdc;
+    }
+
+    &--black {
+      --set-btn-bg-color: #000;
+      --set-btn-text-color: #fff;
     }
   }
 }

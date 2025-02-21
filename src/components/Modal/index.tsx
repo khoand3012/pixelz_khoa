@@ -26,11 +26,29 @@ export default function Modal({ onClose }: IModalProps) {
         <div className={styles[`${BLOCK}__body-utils-bar`]}>
           <div className={styles[`${BLOCK}__body-saved-comments`]}>
             <span>Saved Comments</span>
-            <div className={styles[`${BLOCK}__body-comments-count`]}>{commentData.length}</div>
+            <div className={styles[`${BLOCK}__body-comments-count`]}>
+              {commentData.length}
+            </div>
           </div>
           <Toggle label="All Users" onToggle={() => {}} />
         </div>
         <CommentBlock comments={commentData} />
+      </div>
+      <div className={styles[`${BLOCK}__footer`]}>
+        <button className={styles[`${BLOCK}__btn`]}>Delete all</button>
+        <div className={styles[`${BLOCK}__footer-btn-container`]}>
+          <button className={styles[`${BLOCK}__btn`]} onClick={onClose}>
+            Cancel
+          </button>
+          <button
+            className={[
+              styles[`${BLOCK}__btn--black`],
+              styles[`${BLOCK}__btn`],
+            ].join(" ")}
+          >
+            Send all
+          </button>
+        </div>
       </div>
     </div>
   );
